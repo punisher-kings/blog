@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="/css/style.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+    <div class="container">
+        <div class="navbar">
+            <div class="heading">
+                <h1>DAILY JOURNAL</h1>
+            </div>
+            <div class="list">
+                <li>HOME</li>
+                <li>ABOUT US</li>
+                <li>CONTACT US</li>
+            </div>
+        </div>
+        <div class="text">
+            <div class="moon">
+                <a href="/form">
+                    <button>Create Article</button>
+                </a>
+            </div>
+            <% function truncateString(str, num) { if (str.length> num) {
+                return str.slice(0, num) + "...";
+                } else {
+                return str;
+                }
+                }
+                %>
+
+                <% articles.forEach(function(article){ %>
+                    <div class="con">
+                        <a style="text-decoration:none;" href="/article/<%= article.docId %>">
+                            <h1>
+                                <%= article.title %>
+                            </h1>
+
+                        </a>
+
+                        <% const truncatedString=truncateString(article?.content, 200); %>
+
+                            <p>
+                                <%= truncatedString %>
+                            </p>
+                    </div>
+
+                    <% }); %>
+
+
+
+                        <div class="finish">
+                            <h1>Made with ❤️ by The DevWeb</h1>
+                        </div>
+
+        </div>
+
+    </div>
+</body>
+
+</html>

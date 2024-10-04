@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="/css/style.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+    <div class="mm">
+        <form class="form" enctype="multipart/form-data" id="upload-form">
+            <input type="text" placeholder="title" name="title" id="title">
+            <input type="text" placeholder="content" name="content" id="content">
+            <input type="file" name="image" accept="image/*" id="image">
+            <button class="btn">submit</button>
+        </form>
+
+    </div>
+</body>
+
+<script src="https://www.gstatic.com/firebasejs/8.3.0/firebase-app.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.3.0/firebase-storage.js"></script>
+<script src="https://www.gstatic.com/firebasejs/8.3.0/firebase-firestore.js"></script>
+<script src="/js/config.js"></script>
+<script src="/js/upload.js"></script>
+
+</html>

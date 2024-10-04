@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="/css/style.css" rel="stylesheet" type="text/css">
+</head>
+
+<body>
+
+    <a href="/">
+        <h1>
+            &#8592; Back
+        </h1>
+
+    </a>
+
+    <div>
+        <h1>
+            <%= article?.title %>
+        </h1>
+        <div class="img-box">
+            <img height="400" width="400" src="<%= article?.imageUrl %>">
+        </div>
+
+
+
+        <div class="content">
+            <p>
+                <%= article?.content %>
+            </p>
+        </div>
+    </div>
+</body>
+
+</html>
