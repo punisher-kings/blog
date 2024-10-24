@@ -31,14 +31,18 @@ app.get("/", async function (req, res) {
   const querySnapshot = await getDocs(collection(db, "articles"));
   querySnapshot.forEach((doc) => {
     // doc.data() is never undefined for query doc snapshots
+
     articles.push(doc.data());
   });
-
+  console.log(articles);
   res.render("./pages/index", { articles: articles });
 });
 
 app.get("/article/:id", async function (req, res) {
-  const q = query(collection(db, "articles"), where("docId", "==", req.params.id));
+  const q = query(
+    collection(db, "articles"),
+    where("docId", "==", req.params.id)
+  );
 
   const querySnapshot = await getDocs(q);
   let articles = [];
